@@ -53,6 +53,10 @@ if(document.getElementById("products")){
 
 function searchProduct(){
   let val = document.getElementById("search").value.toLowerCase();
+if(val===""){
+  showAll();
+  return;
+}
   let filtered = products.filter(p => p.name.toLowerCase().includes(val));
   display(filtered);
   document.getElementById("categorySection").style.display = "none";
@@ -147,5 +151,9 @@ if(document.getElementById("orders")){
   }
 
   document.getElementById("orders").innerHTML=html;
+}
+function clearCart(){
+  localStorage.removeItem("cart");
+  location.reload();
 }
 
