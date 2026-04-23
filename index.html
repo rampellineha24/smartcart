@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartCart</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2>🛒 SmartCart</h2>
+
+  <input id="search" placeholder="Search..." onkeyup="searchProduct()">
+
+  <span id="welcome"></span>
+
+  <a href="cart.html">Cart (<span id="count">0</span>)</a>
+  <a href="orders.html">Orders</a>
+</div>
+
+<div class="hero">
+  <h1>Shopping Website</h1>
+  <p>Up to 50% OFF</p>
+</div>
+
+<div class="categories" id="categorySection">
+
+  <div class="cat-card" onclick="openCategory('electronics')">
+    <img src="./images/electronics.jpg">
+    <h3>Electronics</h3>
+  </div>
+
+  <div class="cat-card" onclick="openCategory('fashion')">
+    <img src="./images/fashion.jpg">
+    <h3>Fashion</h3>
+  </div>
+
+  <div class="cat-card" onclick="openCategory('beauty')">
+    <img src="./images/beauty.jpg">
+    <h3>Beauty</h3>
+  </div>
+
+  <div class="cat-card" onclick="openCategory('grocery')">
+    <img src="./images/grocery.jpg">
+    <h3>Grocery</h3>
+  </div>
+
+</div>
+
+<button onclick="showAll()" class="back-btn">⬅ Back</button>
+
+<h2 class="title">Products</h2>
+<div id="products" class="products"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

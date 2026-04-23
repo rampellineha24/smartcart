@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Login</h2>
+
+<input id="email" placeholder="Enter Email">
+<br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login(){
+  let email=document.getElementById("email").value;
+  let name=email.split("@")[0];
+  localStorage.setItem("user",name);
+  window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
